@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Movie Reviews</title>
+	<link rel="stylesheet" type="text/css" href="./reviews-full-stack-style.css" />
+	<link rel="stylesheet" type="text/css" href="./reviews-full-stack-layout.css" />
+	
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Midnite Owl's Movie Reviews</h1>
+		</header>
+		<div class="categories-item-1">
+			<h2>Thanks for visiting my movie review page!</h2>
+		</div>
+		<h3 class="categories-item-2">Choose A Category</h3>
+		<div class="categories-item-3" th:each="category: ${categories}">
+	<!-- category((iterateable value)give it a singular name)
+		{categories}==link to @RequestMapping in controller- -->
+		
+		<h3><a class="categories-item-4" th:href="@{/category(id=${category.id})}" th:text="${category.categoryName}"></a></h3>
+		<!--(link)/category==the name of the page being pointed to 
+		((id=${category.id})==go to the category class and get the id of the category
+		"${category.categoryName}" == list all the categories in category class by name-->	
+	</div>
+</div>
+</body>
+</html>
+<!-- 
+ <a href="http://en.wikipedia.org/">Wikipedia</a><div class="box"><iframe src="http://en.wikipedia.org/" width = "500px" height = "500px"></iframe></div> remains open on mouseover. -->

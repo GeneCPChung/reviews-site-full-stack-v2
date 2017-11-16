@@ -1,0 +1,53 @@
+a {
+	text-decoration: none;
+	color: #380117;
+}
+
+a:hover {
+	color: #A4A4F7;
+}
+
+body {
+	background-image: radial-gradient(circle at center, rgba(63, 53, 57, 0.75),
+		#19193B),url("/images/movie-reel.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-opacity: 0.35;
+}
+
+h1 {
+	color: #380117;
+}
+
+h2 {
+	color: #380117;
+	font-size: 175%;
+}
+
+h4 {
+	color: #3F3539;
+	font-family: Times New Roman;
+	}
+
+header {
+	background: radial-gradient(circle at center, #D2D2F6, #4949B5, #030326);
+		border-radius: 10px;
+		border: 2px solid #F4F3F4;
+		font-size: 100%;
+		font-family: "Verdana";
+		padding: 1rem;
+		text-align: center;
+		width: relative;
+}
+
+ol,
+ul {
+	list-style-type: none;
+}
+
+.categories-item-2 {
+	font-size: 150%;
+	color: #380117;
+}

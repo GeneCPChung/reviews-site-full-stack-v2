@@ -1,0 +1,37 @@
+
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Movie Review</title>
+	<link rel="stylesheet" type="text/css" href="./reviews-full-stack-style.css" />
+	<link rel="stylesheet" type="text/css" href="./reviews-full-stack-layout.css" />
+
+
+</head>
+
+<body>
+	<div class="container">
+
+	<header>
+		<h1>The Owl's Review</h1>
+	</header>
+
+		<div class="review-item-1">
+		<h2 th:text="${review.movieCategory.categoryName}"></h2>	
+		<h2 th:text="${review.movieTitle}"></h2>
+		</div>
+
+		<div class="review-item-2">
+			<img th:src="${review.images}"></img>
+			<h2 th:text="${review.reviewText}"></h2>
+			<!-- review class.accessor method.category class accessor methods -->
+		</div>
+		<footer id="back">
+			<h3><a th:href="@{/category(id=${review.movieCategory.id})}">Back to Movie Category</a></h3>
+		</footer>
+	</div>
+
+</body>
+</html>

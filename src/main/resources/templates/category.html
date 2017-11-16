@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Movie Review</title>
+	<link rel="stylesheet" type="text/css" href="./reviews-full-stack-style.css" />
+	<link rel="stylesheet" type="text/css" href="./reviews-full-stack-layout.css" />
+
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1>Movies</h1>
+		</header>
+		<div class="category-page-item-1">
+			<h2>Choose A Movie</h2>
+		</div>
+		<div class="category-page-item-2" th:each="review: ${category.movieReviews}">
+		<!-- category((iterateable value)give it a singular name)
+		{categories ==link to @RequestMapping in controller 
+			.movieReviews}==Name of "mappedBy = ' ' " in your catory class-->
+			<h2><a class="category-page-item-3" th:href="@{/review(id=${review.id})}" th:text="${review.movieTitle}"></a></h2>
+		</div>
+		<footer>
+			<h3 id="back"><a href="http://localhost:8080/categories">Back to Categories</a></h3>
+		</footer>
+	</div>
+</body>
+</html>
