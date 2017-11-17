@@ -2,10 +2,6 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-}	
-
-h1 {
-
 }
 
 h2 {
@@ -83,7 +79,7 @@ display: flex;
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	margin: 1em auto;
 }
 
@@ -99,6 +95,15 @@ display: flex;
 
 .review-item-2 {
 	grid-column: 1 / -1;
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.review-item-3 {
+	align-items: center;
+	display: flex;
+	grid-column: 1 / -1;
+	justify-content: center;
 	margin-top: 3rem;
 	text-align: center;
 }

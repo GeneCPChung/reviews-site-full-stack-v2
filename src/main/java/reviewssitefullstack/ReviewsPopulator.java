@@ -20,13 +20,13 @@ public class ReviewsPopulator implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		Tag tagG = new Tag("G");
+		Tag tagG = new Tag("G", null);
 		tagRepo.save(tagG);
-		Tag tagPg = new Tag("PG");
+		Tag tagPg = new Tag("PG", null);
 		tagRepo.save(tagPg);
-		Tag tagPg13 = new Tag("PG-13");
+		Tag tagPg13 = new Tag("PG-13", null);
 		tagRepo.save(tagPg13);
-		Tag tagR = new Tag("R");
+		Tag tagR = new Tag("R", null);
 		tagRepo.save(tagR);
 
 		Category category1 = new Category("Sci-Fi", "/images/the-matrix.jpg", null);

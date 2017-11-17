@@ -28,7 +28,11 @@
 			<h2 th:text="${review.reviewText}"></h2>
 			<!-- review class.accessor method.category class accessor methods -->
 		</div>
+		<div th:each="tags: ${review.reviewTags}">		
+		<h4><a th:href="@{/tag(id=${tags.id})}" class="review-item-3" th:text="'Tags: ' + ${tags.tagName}"></a></h4>
+		</div>
 		<footer id="back">
+		
 			<h3><a th:href="@{/category(id=${review.movieCategory.id})}">Back to Movie Category</a></h3>
 		</footer>
 	</div>

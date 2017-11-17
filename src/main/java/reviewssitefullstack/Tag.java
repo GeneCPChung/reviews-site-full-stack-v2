@@ -17,10 +17,14 @@ public class Tag {
 	private String tagName;
 
 	@ManyToMany(mappedBy = "reviewTags")
-	private Set<Review> tags;
+	private Set<Review> reviews;
 
-	public Tag(String tagName) {
+	protected Tag() {
+	}
+
+	public Tag(String tagName, Set<Review> reviews) {
 		this.tagName = tagName;
+		this.reviews = reviews;
 	}
 
 	public Long getId() {
@@ -31,8 +35,8 @@ public class Tag {
 		return tagName;
 	}
 
-	public Set<Review> getTag() {
-		return tags;
+	public Set<Review> getReviews() {
+		return reviews;
 	}
 
 }
