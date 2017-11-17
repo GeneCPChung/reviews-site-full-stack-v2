@@ -46,6 +46,14 @@ public class Review {
 		return id;
 	}
 
+	public void addTag(Tag newTag) {
+		reviewTags.add(newTag);
+	}
+
+	public void removeTag(Tag tagName) {
+		reviewTags.remove(tagName);
+	}
+
 	public String getImages() {
 		return images;
 	}

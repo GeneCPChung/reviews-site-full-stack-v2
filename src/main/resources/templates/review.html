@@ -31,10 +31,23 @@
 		<div th:each="tags: ${review.reviewTags}">		
 		<h4><a th:href="@{/tag(id=${tags.id})}" class="review-item-3" th:text="'Tags: ' + ${tags.tagName}"></a></h4>
 		</div>
-		<footer id="back">
+		<form method="POST">
+            <input name="id" type="hidden" th:value="${review.id}" />
+			<label>Add a Tag to this Review: </label>
+			<input type="text" name="tagName" />
+			<button th:formaction="@{/add-tag}">add</button>	
+		</form>
+		
+		<form method="POST">
+		<input name="id" type="hidden" th:value="${review.id}" />
+			<label>Enter name of Tag to remove:</label>
+			<input type="text" name="tagName" />
+			<button th:formaction="@{/remove-tag}">delete</button>
+		</form>
+		<!-- <footer id="back">
 		
 			<h3><a th:href="@{/category(id=${review.movieCategory.id})}">Back to Movie Category</a></h3>
-		</footer>
+		</footer> -->
 	</div>
 
 </body>
