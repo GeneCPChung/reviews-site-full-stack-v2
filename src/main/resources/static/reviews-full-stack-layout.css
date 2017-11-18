@@ -8,6 +8,11 @@ h2 {
 	margin-top: 2rem;
 }
 
+h4 {
+	
+	margin-left: 1rem;
+}
+
 footer {
 	align-items: center;
 	grid-column: 1 /-1;
@@ -79,7 +84,7 @@ display: flex;
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	margin: 1em auto;
 }
 
@@ -100,6 +105,24 @@ display: flex;
 }
 
 .review-item-3 {
+	align-items: center;
+	display: flex;
+	grid-column: 1 / -1;
+	justify-content: center;
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.review-item-4 {
+	align-items: center;
+	display: flex;
+	grid-column: 1 / -1;
+	justify-content: center;
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.review-item-5 {
 	align-items: center;
 	display: flex;
 	grid-column: 1 / -1;

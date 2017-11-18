@@ -8,7 +8,7 @@ a:hover {
 }
 
 body {
-	background-image: radial-gradient(circle at center, rgba(63, 53, 57, 0.75),
+	background-image: radial-gradient(circle at center, rgba(184, 176, 255, 1.0),
 		#19193B),url("/images/movie-reel.jpg");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -27,9 +27,12 @@ h2 {
 }
 
 h4 {
-	color: #3F3539;
+	color: white;
 	font-family: Times New Roman;
 	}
+h5 {
+	color: white;
+}
 
 header {
 	background: radial-gradient(circle at center, #D2D2F6, #4949B5, #030326);
@@ -40,6 +43,14 @@ header {
 		padding: 1rem;
 		text-align: center;
 		width: relative;
+}
+
+input {
+	color: black;
+}
+
+output {
+	color: white;
 }
 
 ol,

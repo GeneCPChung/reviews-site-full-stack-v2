@@ -14,13 +14,13 @@
 <body>
 	<div class="container">
 
-	<header>
-		<h1>The Owl's Review</h1>
-	</header>
+		<header>
+			<h1>The Owl's Review</h1>
+		</header>
 
 		<div class="review-item-1">
-		<h2 th:text="${review.movieCategory.categoryName}"></h2>	
-		<h2 th:text="${review.movieTitle}"></h2>
+			<h2 th:text="${review.movieCategory.categoryName}"></h2>	
+			<h2 th:text="${review.movieTitle}"></h2>
 		</div>
 
 		<div class="review-item-2">
@@ -28,35 +28,51 @@
 			<h2 th:text="${review.reviewText}"></h2>
 			<!-- review class.accessor method.category class accessor methods -->
 		</div>
-		<div th:each="tags: ${review.reviewTags}">		
-		<h4><a th:href="@{/tag(id=${tags.id})}" class="review-item-3" th:text="'Tags: ' + ${tags.tagName}"></a></h4>
-		</div>
-		<form method="POST">
-            <input name="id" type="hidden" th:value="${review.id}" />
-			<label>Add a Tag to this Review: </label>
-			<input type="text" name="tagName" />
-			<button th:formaction="@{/add-tag}">add</button>	
-		</form>
-		
-		<form method="POST">
-		<input name="id" type="hidden" th:value="${review.id}" />
-			<label>Enter name of Tag to remove:</label>
-			<input type="text" name="tagName" />
-			<button th:formaction="@{/remove-tag}">delete</button>
-		</form>
+
+		<div class="review-item-3">
 			<div>
+				<h4>Tags: </h4>
+			</div>	
+			<div th:each="tags: ${review.reviewTags}">	
+
+				<h4><a th:href="@{/tag(id=${tags.id})}" th:text="' ' + ${tags.tagName}"></a></h4>
+			</div >
+		</div>
+		
+		<div class="review-item-4">
+			<form method="POST">
+				<input name="id" type="hidden" th:value="${review.id}" />
+				<label>Add a Tag to this Review: </label>
+				<input type="text" name="tagName" />
+				<button th:formaction="@{/add-tag}">add</button>	
+			</form>
+
+			<form method="POST">
+				<input name="id" type="hidden" th:value="${review.id}" />
+				<label>Enter name of Tag to remove:</label>
+				<input type="text" name="tagName" />
+				<button th:formaction="@{/remove-tag}">delete</button>
+			</form>
+		</div>
+
+		<div class="review-item-5">
 			<label>Enter any comments you would like to add to this Review: </label>
-			<input type="text"/>
-				</div>
+			<input  id="inputField" type="text"/>
+			<output class="addComment" id="outputField"></output>
+			<!-- <button id="add-comment" type="submit" value="Submit">Submit</button> -->
+		</div>
+		<div>
+		<h5></h5>
+</div>
+		<!-- 1-enter comment in input field 2=create event listener of  -->
 	<!-- 	<footer id="back">
 		
 			<h3><a th:href="@{/category(id=${review.movieCategory.id})}">Back to Movie Category</a></h3>
 		</footer> -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		
-		<script src="./js/jquery-3.2.1.js"></script>
-		
-		</div>
-
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/jquery-3.2.1.js"></script>
+	<script src="/js/review-app.js"></script>
 </body>
 </html>

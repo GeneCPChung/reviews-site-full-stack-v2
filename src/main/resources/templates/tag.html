@@ -14,10 +14,13 @@
 		<header>
 			<h1>Movies</h1>
 		</header>
+		<div>
+		<h2 th:text="'Movie Tag: ' + ${tag.tagName}"></h2>
+		</div>
 		<div class="category-page-item-1">
 			<h2>Choose A Movie</h2>
 		</div>
-		<h2 th:text="'Movie Rating: ' + ${tag.tagName}"></h2>
+		
 		<div class="category-page-item-2" th:each="tagReviews: ${tag.reviews}">
 		<!-- category((iterateable value)give it a singular name)
 		{categories ==link to @RequestMapping in controller 
