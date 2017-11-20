@@ -14,7 +14,7 @@
 		<header>
 			<h1>Movies</h1>
 		</header>
-		<div>
+		<div class="tag">
 			<h2 th:text="'Movie Tag: ' + ${tag.tagName}"></h2>
 		</div>
 		<div class="category-page-item-1">
@@ -28,7 +28,7 @@
 			
 			<h2><a class="category-page-item-3" th:href="@{/review(id=${tagReviews.id})}" th:text="${tagReviews.movieTitle}"></a></h2>
 		</div>
-		<footer>
+		<footer class="footer">
 			<p id="copyWrite">&copy; 2017</p>
 		</footer>
 	</div>

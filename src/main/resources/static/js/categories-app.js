@@ -9,16 +9,17 @@ for (var i = 0; i < listItems.length; i++) {
 };
 
 $('#copyWrite')
-    .data('textToggle', "Create By Gene CP Chung")
-    .hover(function (e) {
-        var that = $(this);
-        var textToSet = that.data('textToggle');
-	    that.data('textToggle', that.text());
-        that.text(textToSet);
-    }, function (e) {
-        var that = $(this);
-        var textToSet = that.data('textToggle');
-        that.data('textToggle', that.text());
-        that.text(textToSet);
-    });
+.data('textToggle', "Create By Gene CP Chung")
+.hover(function (e) {
+    var that = $(this);
+    var textToSet = that.data('textToggle');
+    that.data('textToggle', that.text());
+    that.text(textToSet);
+    
+}, function (e) {
+    var that = $(this);
+    var textToSet = that.data('textToggle');
+    that.data('textToggle', that.text());
+    that.text(textToSet);
+});
 

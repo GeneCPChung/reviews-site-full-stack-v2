@@ -1,4 +1,3 @@
-
 var commentNbr = 0;
 var addCommentButton = document.getElementById('addCommentButton');
 
@@ -21,7 +20,7 @@ document.getElementById("add").onclick = function() {
 			var idNameToDelete = 'commentDiv' + idName;
 			var elementToDelete = document.getElementById(idNameToDelete);
 			elementToDelete.parentNode.removeChild(elementToDelete);
-				
+
 		} else {
 			alert("Delete Canceled");
 		}

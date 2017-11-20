@@ -5,8 +5,10 @@
 
 <head>
 	<title>Movie Review</title>
-	<link rel="stylesheet" type="text/css" href="./reviews-full-stack-style.css" />
-	<link rel="stylesheet" type="text/css" href="./reviews-full-stack-layout.css" />
+	<link rel="stylesheet" type="text/css"
+	href="./reviews-full-stack-style.css" />
+	<link rel="stylesheet" type="text/css"
+	href="./reviews-full-stack-layout.css" />
 
 
 </head>
@@ -19,7 +21,7 @@
 		</header>
 
 		<div class="review-item-1">
-			<h2 th:text="${review.movieCategory.categoryName}"></h2>	
+			<h2 th:text="${review.movieCategory.categoryName}"></h2>
 			<h2 th:text="${review.movieTitle}"></h2>
 		</div>
 
@@ -31,47 +33,49 @@
 
 		<div class="review-item-3">
 			<div>
-				<h4>Tags: </h4>
-			</div>	
-			<div th:each="tags: ${review.reviewTags}">	
-
-				<h4><a th:href="@{/tag(id=${tags.id})}" th:text="' ' + ${tags.tagName}"></a></h4>
-			</div >
+				<h4>Tags:</h4>
+			</div>
+			<div th:each="tags: ${review.reviewTags}">
+				<h4>
+					<a th:href="@{/tag(id=${tags.id})}" th:text="' ' + ${tags.tagName}"></a>
+				</h4>
+			</div>
 		</div>
-		
+
 		<div class="review-item-4">
-			<form method="POST">
-				<input name="id" type="hidden" th:value="${review.id}" />
-				<label>Add a Tag to this Review: </label>
-				<input type="text" name="tagName" />
-				<button th:formaction="@{/add-tag}">add</button>	
+			<form id="form" method="POST">
+				<input name="id" type="hidden" th:value="${review.id}" /> <label>Add
+				a Tag to this Review: </label> <input type="text" name="tagName" />
+				<button th:formaction="@{/add-tag}">add</button>
 			</form>
 
 			<form method="POST">
-				<input name="id" type="hidden" th:value="${review.id}" />
-				<label>Enter name of Tag to remove:</label>
-				<input type="text" name="tagName" />
+				<input name="id" type="hidden" th:value="${review.id}" /> <label>Enter
+				Name of Tag to Remove:</label> <input type="text" name="tagName" />
 				<button th:formaction="@{/remove-tag}">delete</button>
 			</form>
 		</div>
 		<div class="user-comments" id="comments">
+			<div class="commentSec">
+				<label>Enter any comments you would like to add to this
+				Review: </label> <input id="commentArea" type="text"
+				onfocus="this.value='';" placeholder="Enter A Comment" /> <input
+				type="button" value="Add Comment" id="add" />
+			</div>
 		</div>
-		<div>
-			<label>Enter any comments you would like to add to this Review: </label>
-			<input  id="commentArea" type="text" onfocus="this.value='';" placeholder="Enter A Comment" />
-			<input type="button" value="Add Comment" id="add"/>
-
+		<div class="backBtn">
+			<h2>
+				<a href="http://localhost:8080/categories">Back to Categories</a>
+			</h2>
+		</div>
+		<footer class="footer">
 			
-		</div>
-		<div>			
-			<h3 id="back"><a href="http://localhost:8080/categories">Back to Categories</a></h3>
-		</div>
-		<footer>
 			<p id="copyWrite">&copy; 2017</p>
 		</footer>
-		
+
 	</div>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/js/jquery-3.2.1.js"></script>
 	<script src="/js/review-app.js"></script>
 	<script src="/js/categories-app.js"></script>
