@@ -17,6 +17,18 @@ body {
 	background-opacity: 0.35;
 }
 
+div h2 a:hover {
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+
+/*footer {width:6em}
+footer:hover small {display:none}
+footer:hover:before {content:"Reply!"}*/
+
 h1 {
 	color: #380117;
 }
@@ -57,6 +69,11 @@ output {
 ol,
 ul {
 	list-style-type: none;
+}
+
+li {
+	font-size: 150%;
+	color: white;
 }
 
 .categories-item-2 {

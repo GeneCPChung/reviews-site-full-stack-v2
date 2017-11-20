@@ -15,7 +15,7 @@
 			<h1>Movies</h1>
 		</header>
 		<div>
-		<h2 th:text="'Movie Tag: ' + ${tag.tagName}"></h2>
+			<h2 th:text="'Movie Tag: ' + ${tag.tagName}"></h2>
 		</div>
 		<div class="category-page-item-1">
 			<h2>Choose A Movie</h2>
@@ -23,14 +23,17 @@
 		
 		<div class="category-page-item-2" th:each="tagReviews: ${tag.reviews}">
 		<!-- category((iterateable value)give it a singular name)
-		{categories ==link to @RequestMapping in controller 
-			.movieReviews}==Name of "mappedBy = ' ' " in your catory class-->
+		{tag ==link to @RequestMapping in controller 
+			.reviews}==Name of "mappedBy = ' ' " in your tag class-->
 			
 			<h2><a class="category-page-item-3" th:href="@{/review(id=${tagReviews.id})}" th:text="${tagReviews.movieTitle}"></a></h2>
 		</div>
 		<footer>
-			<h3 id="back"><a href="http://localhost:8080/categories">Back to Categories</a></h3>
+			<p id="copyWrite">&copy; 2017</p>
 		</footer>
 	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/js/jquery-3.2.1.js"></script>
+	<script src="/js/categories-app.js"></script>
 </body>
 </html>
