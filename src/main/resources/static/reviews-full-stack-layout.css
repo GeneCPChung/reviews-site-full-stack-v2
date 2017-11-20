@@ -36,6 +36,7 @@ img {
 	display: flex;
 	grid-column: 1 / -1;
 	justify-content: center;
+	margin-top: 1rem;
 	text-align: center;
 }
 
