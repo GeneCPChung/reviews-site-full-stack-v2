@@ -4,7 +4,6 @@ import javax.annotation.Resource;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
 /*
 @Component
 public class ReviewsPopulator implements CommandLineRunner {
@@ -41,7 +40,7 @@ public class ReviewsPopulator implements CommandLineRunner {
 		categoryRepo.save(category5);
 
 		Review review1 = new Review("The Matrix", "/images/the-matrix.jpg",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed risus rutrum dolor aliquam rhoncus. Donec tempor eros orci, vitae tincidunt exlaoreet quis. Sed et rutrum tellus, a cursus sem.",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed risus rutrum dolor aliquam rhoncus. Donec tempor eros orci, vitae tinciduntexlaoreet quis. Sed et rutrum tellus, a cursus sem.",
 				category1, tagPg13);
 		reviewRepo.save(review1);
 		Review review2 = new Review("Beaches", "/images/beaches.jpg",
@@ -49,11 +48,11 @@ public class ReviewsPopulator implements CommandLineRunner {
 				category2, tagPg);
 		reviewRepo.save(review2);
 		Review review3 = new Review("Dumb & Dumber", "/images/dumb-and-dumber.jpg",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed risus rtrum dolor aliquam rhoncus. Donec tempor eros orci, vitae tincidunt ex laoreet quis. Sed et rutrum tellus, a cursus sem.",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed risus rutrum dolor aliquam rhoncus. Donec tempor eros orci, vitae tincidunt exlaoreet quis. Sed et rutrum tellus, a cursus sem.",
 				category3, tagPg);
 		reviewRepo.save(review3);
 		Review review4 = new Review("Full Metal Jacket", "/images/fmj.jpg",
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed risus rutrum dolor aliquam rhoncus. Donec tempor eros orci, vitae tincidunt exlaoreet quis. Sed et rutrum tellus, a cursus sem.",
+				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed risus rutrum dolor aliquam rhoncus. Donec tempor eros orci, vitae tinciduntexlaoreet quis. Sed et rutrum tellus, a cursus sem.",
 				category4, tagR);
 		reviewRepo.save(review4);
 		Review review5 = new Review("The Matrix: Reloaded", "/images/the-matrix.jpg",
